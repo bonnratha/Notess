@@ -29,4 +29,5 @@ if (hour === 0 && prepand === ' AM ') {
 }
 console.log(`Current Time : ${hour}${prepand} : ${minute} : ${second}`);
 
-// Need to understand this !!!
+
+//// TODO: understand how this code works
