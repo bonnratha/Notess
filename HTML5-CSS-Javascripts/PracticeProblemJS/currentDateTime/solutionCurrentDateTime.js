@@ -30,4 +30,4 @@ if (hour === 0 && prepand === ' AM ') {
 console.log(`Current Time : ${hour}${prepand} : ${minute} : ${second}`);
 
 
-//// TODO: understand how this code works
+//// TODO: learn of how this code works. :)
