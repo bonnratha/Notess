@@ -58,6 +58,6 @@ function displayTime(date) {
   return "Current time is : " + AMorPMHour + " : " + min + " : " + sec;
 
 }
-
+// Need to update the time
 document.write(displayDate(today)+"<br/>\n");
 document.write(displayTime(today));
