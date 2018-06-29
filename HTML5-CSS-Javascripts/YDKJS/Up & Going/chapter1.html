@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h1>Chapter 1 : Into Programming</h1>
+	<h2>Exercise</h2>
+</head>
+<body>
+	<script type="text/javascript">
+
+		// Define constants
+
+const taxRate = 0.08;
+const phonePrice = 99.99;
+const accessoryPrice = 9.99;
+
+// input variables & constants
+const threshold = prompt("What is your threshold?");
+const accountBalance = prompt("What is your current account balance?");
+
+// Define variables
+var amount = 0;
+var numberOfPhone = 0;
+var numberOfAccessory = 0;
+
+function calculateTax (amt) {
+amt = amt + (amt * taxRate);
+return amt;
+}
+function formatAmount(amt2) {
+return "$ " +amt2.toFixed(2);
+}
+
+
+while (amount<accountBalance) {
+
+	numberOfPhone += 1;
+	amount += phonePrice;
+	if (amount<threshold) {
+	numberOfAccessory += 1;
+	amount += accessoryPrice;
+	}
+
+}
+
+amount = calculateTax(amount);
+document.write(formatAmount(amount));
+
+
+	</script>
+</body>
+</html>
