@@ -18,8 +18,17 @@ Current Date and Time
 const today = new Date();
 const dayList = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const monthList = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
+//const testday = new Date("January 1, 2012 11:00:9");
 //I created two functions that return string results
+
+
+function intFormatLength(i, len) {
+  var ints = i.toString(); //convert to string
+    if (ints.length<len)
+      { ints = "0"+ ints; }
+    else { ints = ints;}
+  return ints;
+}
 
 /*
 DisplayDate funtion
@@ -38,27 +47,29 @@ function displayDate(date) {
 function displayTime(date) {
 
   var hour = date.getHours();
-  var min = date.getMinutes();
-  var sec = date.getSeconds();
+  var min = intFormatLength(date.getMinutes(),2);
+  var sec = intFormatLength(date.getSeconds(),2);
 
   function AMorPM(hr) {
-    if (hr < 11) {
+    if (hr <= 11) {
+      hr = intFormatLength(hr,2);
       return hr = hr + " AM";
     } else if (hr == 12) {
+      hr = intFormatLength(hr,2);
       return hr = hr + " PM";
     } else if (hr == 24) {
       hr = hr - 12;
+      hr = intFormatLength(hr,2);
       return hr = hr + " AM";
     } else {
       hr = hr - 12;
+      hr = intFormatLength(hr,2);
       return hr = hr + " PM";
     }
   }
   var AMorPMHour = AMorPM(hour);
   return "Current time is : " + AMorPMHour + " : " + min + " : " + sec;
-
 }
-// Need to update the time
-// The object is not correct!!!!
+
 document.write(displayDate(today)+"<br/>\n");
 document.write(displayTime(today));
