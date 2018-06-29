@@ -59,5 +59,6 @@ function displayTime(date) {
 
 }
 // Need to update the time
+// The object is not correct!!!!
 document.write(displayDate(today)+"<br/>\n");
 document.write(displayTime(today));
