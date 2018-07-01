@@ -1,0 +1,10 @@
+- JS has SEVEN built in types. They are null, undefined, boolean, number, string, symbol (ES6), and object.
+- All these types (except object) are called primitives.
+- typeof operator return the type in string value.
+- But null type returns as "object" with typeof operator.
+- Function is referred to as callable object.
+- Think of array as a subtype of the "object" built in type of JS.
+- In JS, variables don't have type - values in them have types.
+- Variables that have no value currently, actually have the "undefined" value.
+- Understand the different between "undeclared" vs "undefined"
+- The browser is basically the "window" object.
