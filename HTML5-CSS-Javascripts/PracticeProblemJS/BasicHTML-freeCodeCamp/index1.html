@@ -29,7 +29,23 @@ Basic HTML Learning-->
     <li>are you?</li>
   </ol>
   <!-- input element-->
-  <input text="nameField" placeholder="Enter your name here">
+  <input text="nameField"required placeholder="Enter your name here">
+  <!--Form element-->
+  <!-- button element -->
+  <form action="/contact.html"><button type="submit">Submit</button> </form>
+  <!-- radio
+It is considered best practice to set a for attribute on the label element,
+with a value that matches the value of the id attribute of the input element.
+This allows assistive technologies to create a linked relationship between the
+label and the child input element-->
+  <label>
+  <input type="radio" name="indoor-outdoor">Indoor
+</label>
+<!-- example of checkboxes -->
+<label for="furry"><input id="furry" type="checkbox" name="personality"> Furry</label>
+<label for="loving"><input id="loving" type="checkbox" name="personality"> Loving</label>
+<label for="outgoing"><input id="outgoing" type="checkbox" name="personality"> Outgoing</label>
+
 </main>
 
 </html>
