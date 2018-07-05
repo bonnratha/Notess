@@ -1,13 +1,24 @@
-//// TODO: comments
-// https://www.calculatestuff.com/miscellaneous/age-calculator
+/*
+This Javascript calculates the age using the current dates and your date of birth.
+This does not include the timestamp of your date of birth. It only assumes
+that you are born at 00 hour of that date of birth.
 
+ Testing site: https://www.calculatestuff.com/miscellaneous/age-calculator
+*/
 
-var currentDate = new Date("8 20 2018");
-var birthDate = new Date("6 4 2014");
+// declare variables
+const currentDate = new Date();
+var birthDate = new Date("7 19 1993"); // Date of birth
+
+/*
+This function calculates your age using the current date and your birth date as
+inputs.
+The caclulation is based on two dependencies: month and birth days
+*/
 
 function calculateYourAge(crDate, bDate) {
 
-  // declare variables
+  // declare function variables
   var current_Day = crDate.getDate();
   var current_Month = crDate.getMonth();
   var current_Year = crDate.getFullYear();
@@ -30,8 +41,8 @@ function calculateYourAge(crDate, bDate) {
     return monthLength[months];
   }
   /*
-  This function converts numbers of days into week. I took precation and certain
-  that number of days will always be less than 31 hences will not reach to more than a month
+  This function converts numbers of days into week. I take precation and am certain
+  that number of days will always be less than 31 hences this will not reach to more than a month
   due to the calculation of age_year and age_month
   */
   function convertDaysToWeek(days) {
@@ -41,8 +52,10 @@ function calculateYourAge(crDate, bDate) {
   //Calculate the age_year and age_month
   //These calculations depend on the current_Month and birth_Month
   /*
-    ** If the current month is less than the birth month:
-        It means you do not have the birthday yet, then your age is still -1 from the age calculation
+    ** If the current month is less than or equal to the birth month:
+        It means you do not have your birthday yet, then your age is still -1 from the age calculation
+        It means your month difference is between (12-birth_Month)+ current_Month
+        * Only exception is when when current_Month == birth_Month && current_Year == birth_Year (see line 65 & 67)
 
 
   */
@@ -57,9 +70,10 @@ function calculateYourAge(crDate, bDate) {
   var age_week;
   var age_days;
 
+  // the second dependencies
 
   if (birth_Day > current_Day) {
-
+    // if the previous month is on Decemeber last year :
     let previousMonth = current_Month - 1 == -1 ? 11 : current_Month - 1;
     let yr = current_Month - 1 == -1 ? current_Year - 1 : current_Year;
     day_count = (howManyDaysInThatMonth(previousMonth, yr) - birth_Day) + current_Day;

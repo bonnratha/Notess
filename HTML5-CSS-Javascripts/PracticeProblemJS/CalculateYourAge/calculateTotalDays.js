@@ -39,7 +39,6 @@ function calculateTotalAgeInDays (bDate, current) {
 
 
 
-
   var DayInBYear = bDate.getFullYear() % 4 == 0 ? 366 : 365;
   return yy + DayInBYear-calculateTotalDays(bDate)+calculateTotalDays(current);
 
