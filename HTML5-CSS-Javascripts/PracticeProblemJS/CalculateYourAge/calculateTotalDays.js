@@ -35,3 +35,5 @@ This function calculates the total days of a given dates starting from Jan 1 of 
   var totalDaysInBirthYear = bDate.getFullYear() % 4 == 0 ? 366 : 365;
   return daysOfFullYear + totalDaysInBirthYear - calculateTotalDays(bDate) + calculateTotalDays(current);
 }
+
+console.log(calculateTotalAgeInDays(myBday, today));
