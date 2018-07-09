@@ -1,49 +1,39 @@
+var today = new Date("7 6 2018");
+var myBday = new Date("7 19 1993");
 
+function calculateTotalAgeInDays(bDate, current) {
 
-var today = new Date("07 19 2018");
-var myBday = new Date("7 12 2017");
-const testday = new Date("March 1, 2012 11:00:9");
-var monthLength = [31,28,31,30,31,30,31,31,30,31,30,31];
+var monthLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+/*
+This function calculates the total days of a given dates starting from Jan 1 of that year.
+*/
+  function calculateTotalDays(fullDate) {
 
-
-// var dd = myBday.getFullYear() % 4 == 0 ? 366 : 365;
-
-
-
-function calculateTotalDays(fullDate)
-{
-  let cal_date = fullDate.getDate();
-  let cal_month = fullDate.getMonth();
-  let cal_year = fullDate.getFullYear();
-
-   monthLength[1] = cal_year%4 ==0 ? 29: 27;
-
-  let i = 0;
-  let dayss = 1;
-  while (i<cal_month){
-    dayss += monthLength[i];
-    i++; }
-  return dayss += cal_date;
-}
-
-function calculateTotalAgeInDays (bDate, current) {
-  let yy = 0;
-  let y1 = bDate.getFullYear();
-  let y2 = current.getFullYear();
-  while (y1<=y2) {
-
-    y1++;
-    var b = y1 %4 == 0? 366 : 365;
-    yy += b;
+    monthLength[1] = fullDate.getFullYear() % 4 == 0 ? 29 : 27;
+    let i = 0;
+    let totalDayInThatYear = 0;
+    while (i < fullDate.getMonth()) {
+      totalDayInThatYear += monthLength[i];
+      i++;
+    }
+    return totalDayInThatYear += fullDate.getDate();
   }
 
 
-
-  var DayInBYear = bDate.getFullYear() % 4 == 0 ? 366 : 365;
-  return yy + DayInBYear-calculateTotalDays(bDate)+calculateTotalDays(current);
-
-
-
+  let daysOfFullYear = 0;
+  let birth_year = bDate.getFullYear();
+  let current_year = current.getFullYear();
+  if ((birth_year + 1) == current_year) {
+    daysOfFullYear = 0;
+  } else {
+    while ((birth_year + 1) < current_year) {
+      birth_year++;
+      var daysInAyear = birth_year % 4 == 0 ? 366 : 365;
+      daysOfFullYear += daysInAyear;
+    }
+  }
+  var totalDaysInBirthYear = bDate.getFullYear() % 4 == 0 ? 366 : 365;
+  return daysOfFullYear + totalDaysInBirthYear - calculateTotalDays(bDate) + calculateTotalDays(current);
 }
 
 console.log(calculateTotalAgeInDays(myBday, today));
