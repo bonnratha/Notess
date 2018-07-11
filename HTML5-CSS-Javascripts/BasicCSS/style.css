@@ -1,0 +1,39 @@
+
+
+
+
+body {
+  background-color: #f4f4f4;
+  line-height: 1.6em;
+  margin: 0;
+}
+
+.box-1 {
+  background-color: #333333;
+  color: #fff;
+  border: 3px dotted #ccc;
+  padding: 20px;
+  margin 20px 0 20px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+  h1 {
+  background-color: red;
+  color: white;
+  /*
+  longer way to write:
+  font-family: 'Pacifico', cursive;
+  font-size: 50px;
+  font-weight: lighter; */
+  font: lighter 50px 'Pacifico', cursive;
+}
+
+.box-2 {
+  border: 3px dotted #ccc;
+  padding: 20px;
+  margin 20px 0;
+}
