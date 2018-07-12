@@ -1,6 +1,29 @@
 
+/*
+Reset everything
+*/
 
+*{
+  margin: 0;
+  padding: 0;
+}
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: green;
+}
+
+a:visited {
+  color: orange;
+}
 
 body {
   background-color: #f4f4f4;
@@ -11,9 +34,10 @@ body {
 .box-1 {
   background-color: #333333;
   color: #fff;
-  border: 3px dotted #ccc;
+  border: 5px red solid;
   padding: 20px;
-  margin 20px 0 20px;
+  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .container {
@@ -21,7 +45,7 @@ body {
   margin: auto;
 }
 
-  h1 {
+.box-1 h2 {
   background-color: red;
   color: white;
   /*
@@ -29,11 +53,37 @@ body {
   font-family: 'Pacifico', cursive;
   font-size: 50px;
   font-weight: lighter; */
+
   font: lighter 50px 'Pacifico', cursive;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-style: italic;
+
 }
 
 .box-2 {
   border: 3px dotted #ccc;
   padding: 20px;
-  margin 20px 0;
+  margin: 20px 0;
+}
+
+.categories {
+
+  border: 1px #ccc solid;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.categories h2 {
+  text-align: center;
+}
+
+.categories ul {
+  padding: 40px;
+  list-style: none;
+}
+
+.categories li {
+  padding-bottom: 6px;
+  border-bottom: dotted 1px #333;
 }
