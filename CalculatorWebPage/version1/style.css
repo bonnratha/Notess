@@ -1,4 +1,11 @@
-
+.container {
+  /* containter: */
+background-image: radial-gradient(50% -22%, #843300 0%, #FFA680 100%);
+border: 1px solid #4D1700;
+box-shadow: 2px 5px 4px 0 rgba(255,150,104,0.50);
+border-radius: 38px;
+width: 316px;
+}
 
 
 .numButton {
