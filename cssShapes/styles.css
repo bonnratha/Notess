@@ -1,0 +1,21 @@
+
+.mainContent {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.triangle {
+
+width: 0;
+height: 0;
+border-left: 129.4px solid transparent;
+border-bottom: 371.6px solid #3F78BF;
+border-right: 339.2px solid transparent;
+transform: rotate(24deg);
+
+
+
+}
