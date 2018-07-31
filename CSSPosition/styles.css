@@ -1,0 +1,27 @@
+.ParentElement {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: green;
+  border: 5px solid blue;
+}
+.child1 {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+  border: 5px solid red;
+  left: 0;
+  right: 0;
+  top: 30px;
+/*
+The child1 element is responding not to the dimension of its ParentElement,
+ but the document
+ To make the child element positioned absolutely from its parent element
+ we need to set this on the parent element itself:
+*/
+}
+
+.textItems {
+  display: inline;
+}
