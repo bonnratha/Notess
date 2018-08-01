@@ -1,0 +1,31 @@
+
+.mainContent {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stars {
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 40px solid green;
+  transform: rotate(33deg);
+
+
+}
+
+.stars::before {
+  width: 0;
+  height: 0;
+  position: absolute;
+  content: '';
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 40px solid green;
+  right: -60px;
+  transform: rotate(-66deg);
+}
